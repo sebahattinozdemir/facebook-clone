@@ -13,6 +13,7 @@ import {
   ShoppingCartIcon,
   UserGroupIcon,
 } from "@heroicons/react/outline";
+import { signOut } from "next-auth/react";
 
 function Header() {
   return (
@@ -55,7 +56,7 @@ function Header() {
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />
-        <ChevronDownIcon className="icon" />
+        <ChevronDownIcon onClick={() => signOut()} className="icon" />
       </div>
     </header>
   );
